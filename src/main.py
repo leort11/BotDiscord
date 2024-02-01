@@ -1,10 +1,14 @@
 import discord
 from discord.ext import commands
+from decouple import config
+
+TOKEN = config('TOKEN', default='') 
+PREFIX = config('PREFIX', default='/')
 
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='/', intents=intents)
+bot = commands.Bot(command_prefix=PREFIX, intents=intents)
 
 @bot.event
 async def on_ready():
@@ -14,6 +18,8 @@ async def on_ready():
 @bot.command(name='test')
 async def test_command(ctx):
     await ctx.send("Olá Mundo, estou aqui!")
+    
+if not TOKEN:
+    raise ValueError("A variável de ambiente TOKEN não foi definida.")
 
-
-bot.run('MTIwMDA1NjQxMzcwNDE3OTc2Mg.GNl2Vk.oGeiRiTvZ6pi8R89oKGUx751XIRADkfdOKbfMo')
+bot.run(TOKEN)

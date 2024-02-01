@@ -1,0 +1,28 @@
+Listagem de caminhos de pasta
+O n£mero de s‚rie do volume ‚ BA93-5002
+C:.
+|   .env
+|   .gitignore
+|   estrutura.txt
+|   LICENSE
+|   README.md
+|   requirements.txt
+|   
++---assets
++---config
+|       config.py
+|       __init__.py
+|       
++---data
+|       data_file.json
+|       
++---docs
+|       documentation.md
+|       
++---src
+|       main.py
+|       __init__.py
+|       
+\---tests
+        test_main.py
+        

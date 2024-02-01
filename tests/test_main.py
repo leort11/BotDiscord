@@ -1,5 +1,9 @@
 import discord
 from discord import Intents
+from decouple import config
+
+TOKEN = config('TOKEN')
+
 
 intents = Intents.default()
 intents.all()
@@ -21,4 +25,4 @@ async def on_message(message) :
     if message.content.lower() == '?test' :
         await message.channel.send("Olá Mundo, estou aqui")
 
-client.run('MTIwMDA1NjQxMzcwNDE3OTc2Mg.GNl2Vk.oGeiRiTvZ6pi8R89oKGUx751XIRADkfdOKbfMo')
+client.run(TOKEN)

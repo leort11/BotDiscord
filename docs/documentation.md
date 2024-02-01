@@ -10,26 +10,26 @@ Bem-vindo ao meu primeiro bot Discord! O bot responde mensagens por enquanto.
 ## 🚀 Instalação
 
 1. **Clone o repositório:**
-   ``bash
-   git clone https://github.com/seu-usuario/seu-bot-repo.git
-   ``
+   ```bash
+   git clone https://github.com/leort11/BotDiscord.git
+   ```
 
 2. **Instale as dependências:**
-   ``bash
+   ```bash
    pip install -r requirements.txt
-   ``
+   ```
 
 ## ⚙️ Configuração
 
 - **`config.json`:** Contém as configurações do bot. Certifique-se de fornecer um token válido do Discord.
 
     Exemplo `config.json`:
-    ``json
+    ```json
     {
       "token": "SEU_TOKEN_AQUI",
       "prefix": "/"
     }
-    ``
+    ```
 
 ## 🤝 Contribuição
 
