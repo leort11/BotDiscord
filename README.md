@@ -1,42 +1,45 @@
 # 🤖 leortBot Discord
 
-Bem-vindo ao leortBot, o meu primeiro bot Discord! Este bot foi desenvolvido para responder mensagens por enquanto e pode ser
-facilmente configurado e expandido conforme suas necessidades.
+Welcome to leortBot, my first Discord bot! This bot has been developed to respond to messages for now and can be easily configured and expanded according to your needs.
 
-## 🚀 Instalação
+## 🚀 Installation
 
-1. **Clone o repositório:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/leort11/BotDiscord.git
    ```
 
-2. **Instale as dependências:**
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure o arquivo `.env`:**
-   - Abra o arquivo `.env` na pasta raiz.
-   - Insira seu token do Discord e outras informações conforme necessário.
-   - Salve o arquivo.
+3. **Configure the `.env` file:**
+   - Open the `.env` file in the root folder.
+   - Insert your Discord token and other necessary information.
+   - Save the file.
 
-4. **Execute o bot:**
+4. **Run the bot:**
    ```bash
    python src/main.py
    ```
 
-## 🤝 Contribuição
+## 🤝 Contribution
 
-Se você quiser contribuir, ficaremos felizes em receber suas sugestões, relatórios de bugs ou pull requests. Por favor, siga as diretrizes de contribuição e código ao enviar alterações.
+If you want to contribute, we'll be happy to receive your suggestions, bug reports, or pull requests. Please follow the contribution and code guidelines when submitting changes.
 
-## 📜 Comandos
+## 📜 Commands
 
-1. **/test**
-   - Escreve "Olá Mundo" no chat do Discord.
+1. **test**
+   ```bash
+   /test
+   ```
+   - Writes "Hello World" in the Discord chat.
 
-## ⚙️ Configuração
-   - `.env`: Contém as configurações do bot.
-      ```json
-        TOKEN=SEU_TOKEN_AQUI
+## ⚙️ Configuration
+   - `.env`: Contains the bot configurations.
+      ```bash
+        TOKEN=YOUR_TOKEN_HERE
         PREFIX=/
+        etc...
       ```
