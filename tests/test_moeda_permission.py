@@ -5,7 +5,6 @@ from decouple import config
 
 TOKEN = config('TOKEN', default='') 
 PREFIX = config('PREFIX', default='/')
-IDAUTHOR = config('IDAUTHOR')
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -17,31 +16,25 @@ async def on_ready():
     print(f'Bot está online como: {bot.user.name}')
     print(f"ID: {bot.user.id}")
 
-@bot.command(name='test')
-async def test_command(ctx):
-    await ctx.send("Olá Mundo, estou aqui!")
-
-
-@bot.command(name='salve')
-async def slv_command(ctx):
-    await ctx.send("Salveeee!!!")
 
 @bot.command(name='moeda')
 async def moeda_command(ctx):
-    choice = random.randint(1, 2)
+    # Substitua 'ID_DO_AUTOR_PERMITIDO' pelo ID real do autor permitido
+    autor_permitido_id = 'IDAUTOR'
 
-    if choice == 1:
-        await ctx.message.add_reaction('😀')
-        
-    elif choice == 2:
-        await ctx.message.add_reaction('👑')
+    if ctx.message.author.id == autor_permitido_id:
+        choice = random.randint(1, 2)
+
+        if choice == 1:
+            await ctx.message.add_reaction('😀')
+        elif choice == 2:
+            await ctx.message.add_reaction('👑')
+    else:
+        await ctx.send("Você não tem permissão para usar este comando!")
 
         
     
 if not TOKEN:
     raise ValueError("A variável de ambiente TOKEN não foi definida.")
-
-if not IDAUTHOR:
-    raise ValueError("A variável de ambiente IDAUThOR não foi definida.")
 
 bot.run(TOKEN)
