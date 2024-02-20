@@ -5,7 +5,7 @@ from decouple import config
 
 TOKEN = config('TOKEN', default='') 
 PREFIX = config('PREFIX', default='/')
-IDAUTHOR = config('IDAUTHOR')
+IDAUTHOR = config('IDAUTHOR', default='')
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -20,7 +20,6 @@ async def on_ready():
 @bot.command(name='test')
 async def test_command(ctx):
     await ctx.send("Olá Mundo, estou aqui!")
-
 
 @bot.command(name='salve')
 async def slv_command(ctx):
@@ -41,7 +40,5 @@ async def moeda_command(ctx):
 if not TOKEN:
     raise ValueError("A variável de ambiente TOKEN não foi definida.")
 
-if not IDAUTHOR:
-    raise ValueError("A variável de ambiente IDAUThOR não foi definida.")
 
 bot.run(TOKEN)
