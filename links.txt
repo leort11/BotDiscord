@@ -1,0 +1,5 @@
+# Links Úteis
+    - Documentação do Discord.py: https://discordpy.readthedocs.io/
+    - GitHub do leortBot: https://github.com/leort11/BotDiscord
+    - Emojis para reações: https://getemoji.com
+    - Código das cores: http://html-color.org/pt/
