@@ -42,30 +42,19 @@ async def moeda_command(ctx):
 @bot.command(name='cargos')
 async def cargos_command(ctx):
     embed = discord.Embed(
-        title="Escolha seu cargo FODA!!",
+        title="Exemplo de caixa que adiciona cargos",
         color=purple,
-        description="- Goza Fino  = 🤓\n"
-                    "- Goza Grosso  = 😎\n"
-                    "- Cintura Ignorante  = 🥵\n"
-                    "- Cheira Peido  = 💩\n"
-                    "- LÍNGUA PRETA  = 👅\n"
-                    "- Adora Leite  = 🍼\n"
-                    "- Tem Amizade com o Patrão?  = 👥\n"
-                    "- Beija bem?  = 💋\n"
-                    "- Faz Gostoso?  = 🤨\n"
-                    "- BRUHH  = ☣️\n",
+        # Adicione oque sera escrito na caixa
+        description="- Cargo 1 = 🤓\n"
+                    "- Cargo 2 = 😎\n"
+                    "- Cargo 3 = 🤨\n",
     )
+
+    # Coloque os emojis correspondentes ao cargo
     botmsg = await ctx.send(embed=embed)
     await botmsg.add_reaction("🤓")
     await botmsg.add_reaction("😎")
-    await botmsg.add_reaction("🥵")
-    await botmsg.add_reaction("💩")
-    await botmsg.add_reaction("👅")
-    await botmsg.add_reaction("🍼")
-    await botmsg.add_reaction("👥")
-    await botmsg.add_reaction("💋")
     await botmsg.add_reaction("🤨")
-    await botmsg.add_reaction("☣️")
 
     global msg_id
     msg_id = botmsg.id
@@ -80,53 +69,19 @@ async def on_reaction_add(reaction, user):
     if user.bot:  # Ignorar reações de bots
         return
 
+    # Para cada cargo coloque o nome Exatamente igual ao do servidor e o emoji correspondente
     if reaction.emoji == "🤓" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Goza Fino")
+        role = discord.utils.get(guild.roles, name="Cargo 1")
         await user.add_roles(role)
         print(f"Adicionou o cargo {role.name} para {user.name}")
 
     if reaction.emoji =="😎" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Goza Grosso")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="🥵" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Cintura Ignorante")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="💩" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Cheira Peido")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="👅" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="LÍNGUA PRETA")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="🍼" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Adora Leite")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="👥" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Tem Amizade com o Patrão?")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="💋" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Beija Bem?")
+        role = discord.utils.get(guild.roles, name="Cargo 2")
         await user.add_roles(role)
         print(f"Adicionou o cargo {role.name} para {user.name}")
 
     if reaction.emoji =="🤨" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="Faz Gostoso?")
-        await user.add_roles(role)
-        print(f"Adicionou o cargo {role.name} para {user.name}")
-
-    if reaction.emoji =="☣️" and msg.id == msg_id:
-        role = discord.utils.get(guild.roles, name="BRUHH")
+        role = discord.utils.get(guild.roles, name="Cargo 3")
         await user.add_roles(role)
         print(f"Adicionou o cargo {role.name} para {user.name}")
 
