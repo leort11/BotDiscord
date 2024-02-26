@@ -36,6 +36,18 @@ If you want to contribute, we'll be happy to receive your suggestions, bug repor
    ```
    - Writes "Hello World" in the Discord chat.
 
+2. **/cargos**
+   ```
+   /cargos
+   ```
+   - Shows an example of a box that adds positions based on reactions to the message.
+
+3. **/moeda**
+   ```
+   /moeda
+   ```
+   - Flips a coin with a 50% chance of coming up heads or tails.
+
 ## ⚙️ Configuration
    - `.env`: Contains the bot configurations.
       ```bash
