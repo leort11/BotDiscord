@@ -3,3 +3,7 @@
     - GitHub do leortBot: https://github.com/leort11/BotDiscord
     - Emojis para reações: https://getemoji.com
     - Código das cores: http://html-color.org/pt/
+
+# Comandos terminal (CMD)
+    - Criar o arquivo com os requerimentos: pip freeze > requirements.txt
+    - Criar o arquivo com a estrutura do projeto: tree /A /F > estrutura.txt
